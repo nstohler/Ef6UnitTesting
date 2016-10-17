@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbAccessLib", "DbAccessLib\DbAccessLib.csproj", "{67D4D01D-E9EA-4D8D-9CF8-D07A8D03DA50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbAccess_con", "DbAccess_con\DbAccess_con.csproj", "{EEBD822F-7EA4-49DE-8393-65EF18BB4F03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Tests", "NUnit.Tests\NUnit.Tests.csproj", "{48123489-EABC-4D32-858C-CFEAF47BD15C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{67D4D01D-E9EA-4D8D-9CF8-D07A8D03DA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D4D01D-E9EA-4D8D-9CF8-D07A8D03DA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D4D01D-E9EA-4D8D-9CF8-D07A8D03DA50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBD822F-7EA4-49DE-8393-65EF18BB4F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBD822F-7EA4-49DE-8393-65EF18BB4F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBD822F-7EA4-49DE-8393-65EF18BB4F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBD822F-7EA4-49DE-8393-65EF18BB4F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48123489-EABC-4D32-858C-CFEAF47BD15C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48123489-EABC-4D32-858C-CFEAF47BD15C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48123489-EABC-4D32-858C-CFEAF47BD15C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48123489-EABC-4D32-858C-CFEAF47BD15C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
