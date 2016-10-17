@@ -15,6 +15,12 @@ namespace NUnit.Tests
 	public class Tester
 	{
 		[Test]
+		public void SimpleTest()
+		{
+			Assert.IsTrue(true);
+		}
+
+		[Test]
 		public void TestAddUsingNSubstitute_TestingExtensions()
 		{
 			// https://github.com/scott-xu/EntityFramework.Testing
@@ -31,8 +37,9 @@ namespace NUnit.Tests
 			//newPerson.FirstName.Returns("TESTMOCK");
 
 			// arrange
-			//var set = Substitute.For<DbSet<Person>, IQueryable<Person>, IDbAsyncEnumerable<Person>>().SetupData(data);
-			var set = Substitute.For<DbSet<Person>>().SetupDataX(data);
+			var set1 = Substitute.For<DbSet<Person>, IQueryable<Person>>();
+			var set = set1.SetupData(data);
+			//var set = Substitute.For<DbSet<Person>>().SetupDataX(data);
 
 			var context = Substitute.For<PersonDbContext>();
 			context.PersonSet.Returns(set);
@@ -56,6 +63,7 @@ namespace NUnit.Tests
 		public static DbSet<TEntity> SetupDataX<TEntity>(this DbSet<TEntity> dbSet, ICollection<TEntity> data) where TEntity : class
 		{
 			return Substitute.For<DbSet<TEntity>, IQueryable<TEntity>, IDbAsyncEnumerable<TEntity>>().SetupData(data);
+			// return Substitute.For<DbSet<TEntity>>().SetupData(data);
 		}
 	}
 }
