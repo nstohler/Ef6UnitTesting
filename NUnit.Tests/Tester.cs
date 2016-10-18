@@ -37,9 +37,10 @@ namespace NUnit.Tests
 			//newPerson.FirstName.Returns("TESTMOCK");
 
 			// arrange
-			var set1 = Substitute.For<DbSet<Person>, IQueryable<Person>>();
-			var set = set1.SetupData(data);
-			//var set = Substitute.For<DbSet<Person>>().SetupDataX(data);
+			//var set1 = Substitute.For<DbSet<Person>, IQueryable<Person>, IDbAsyncEnumerable<Person>>();
+			//var set = set1.SetupData(data);
+
+			var set = Substitute.For<DbSet<Person>>().SetupDataX(data);
 
 			var context = Substitute.For<PersonDbContext>();
 			context.PersonSet.Returns(set);
